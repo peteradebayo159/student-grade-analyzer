@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Student Grade Analyzer</h1>
+            <p>Track and analyze student academic performance.</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Add Student -->
+        <section class="form-section">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="studentScore">Score</label>
+                    <input
+                        type="number"
+                        id="studentScore"
+                        placeholder="Enter score (0 - 100)"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Average Score</h3>
+                <p id="averageScore">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Highest Score</h3>
+                <p id="highestScore">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Lowest Score</h3>
+                <p id="lowestScore">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Passed</h3>
+                <p id="passedStudents">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Failed</h3>
+                <p id="failedStudents">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Student Results -->
+        <section class="students-section">
+
+            <div class="section-header">
+                <h2>Student Results</h2>
+
+                <button id="clearAll" class="clear-btn">
+                    Clear All
+                </button>
+            </div>
+
+
+            <div id="studentList" class="student-list">
+
+                <p id="emptyMessage">
+                    No students added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Student Grade Analyzer &copy; 2026</p>
+    </footer>
+
+
+    <script src="jed.js"></script>
+
+</body>
+</html>
